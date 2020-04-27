@@ -1,0 +1,24 @@
+openapi: 3.0.2
+info:
+ title: Demo
+ version: "1.0.0"
+paths:
+  /sessions:
+    post:
+     description: Add new session
+     responses:
+       '200':
+         description: Login sucsesfull
+         content:
+          application/json:
+           schema:
+            items: 
+               $ref: '#/components/schemas/login'
+components:
+  schemas:
+    login:
+     properties:
+      email:
+       type: string
+      password:
+       type: string
