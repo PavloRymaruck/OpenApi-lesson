@@ -16,9 +16,9 @@ paths:
                $ref: '#/components/schemas/login'
 components:
   schemas:
-    login:
+    User:
      properties:
-      email:
+      account title:
        type: string
-      password:
+      name user:
        type: string
