@@ -1,24 +1,26 @@
-openapi: 3.0.2
+openapi: "3.0.0"
 info:
- title: Demo
- version: "1.0.0"
+  description: "A sample API for "
+  version: "1.0.0"
+  title: "Sample"
+  contact:
 paths:
-  /sessions:
+  sessions/:
     post:
-     description: Add new session
-     responses:
-       '200':
-         description: Login sucsesfull
-         content:
-          application/json:
-           schema:
-            items: 
-               $ref: '#/components/schemas/login'
-components:
-  schemas:
-    User:
-     properties:
-      account title:
-       type: string
-      name user:
-       type: string
+      parameters:
+        - name: Email
+          in: query
+          description: for account
+          required: true
+          schema:
+            type: string
+        - name: Pasword
+          in: query
+          description: for account
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Status message
+        
